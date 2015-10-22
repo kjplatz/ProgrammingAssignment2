@@ -33,6 +33,6 @@ cacheSolve <- function(x, ...) {
     ## If we've made it this far, the value has NOT been cached.
     data <- x$get()         ## Get the stored data
     cm <- solve(data,...)   ## Calculate the inverse
-    x$store(cm)             ## Store the cached mean
+    x$storeinverse(cm)      ## Store the cached mean
     cm                      ## And return it.
 }
